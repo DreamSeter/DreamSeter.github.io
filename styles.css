@@ -1,55 +1,84 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #222;
+:root {
+    --bg: #e6e6e6;
+    --text-primary: #1f2f50;
+    --table-border: #6e6e6e;
+    --font-base: Calibri, Arial, sans-serif;
+    --font-size-base: 16px
 }
 
-h2 {
-    background-color: #0a6d57;
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
+body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-base);
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 10px;
     text-align: center;
 }
 
-table {
-    border-collapse: collapse;
-    width: 90%;
-    margin: 20px auto;
-    font-size: 14px;
-}
-
-
-caption {
-    background-color: #635c5c;
+h2 {
+    position: relative;
     color: white;
-    padding: 6px;
-    font-style: italic;
+    background-color: #681414;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+h2::before {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #000000;
 }
 
-th, td {
-    border: 1px solid #999;
-    padding: 6px 10px;
+li {
+    margin: 3px;
 }
 
-thead th {
-    background-color: #e6e6e6;
+dd {
+    font-size: 14px;
+    margin: 10px;
+}
+
+dt {
     font-weight: bold;
 }
 
-td {
+caption {
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.red-text {
+    color: red;
+}
+
+.text-right, .red-text {
     text-align: right;
 }
 
-td:first-child,
-td:nth-child(2) {
-    text-align: left;
-}
-tfoot td {
-    font-weight: bold;
+table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-tfoot td:last-child,
-tfoot td:nth-child(3) {
-    color: red;
+table, th, td {
+    border: 1px solid var(--table-border);
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+tfoot, th {
+    background-color: #e0e9fa;
+    font-weight: bold;
 }
